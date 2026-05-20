@@ -16,13 +16,14 @@ export const t = {
       cta: "Get in touch →",
       lead: (
         <>
-          Placeholder description — Carlotta is a Hamburg-based{" "}
+          Carlotta Pflug is a Hamburg-based{" "}
           <em>creator, organizer and connector</em> working at the intersection
-          of <span className="pink">art</span>, education and social
+          of <span className="pink">art</span>, education, curation, and social
           transformation. Her practice spans interdisciplinary projects, arts
-          education, and event production — all rooted in the belief that good
-          work happens when people, ideas and institutions are brought into
-          conversation with care.
+          mediation, and event production — guided always by the conviction
+          that good work happens where{" "}
+          <span className="pink">creative processes</span> meet organizational
+          clarity.
         </>
       ),
       sections: {
@@ -140,14 +141,14 @@ export const t = {
       cta: "Schreib mir →",
       lead: (
         <>
-          Lückenfüllertext — Carlotta ist eine in Hamburg ansässige{" "}
+          Carlotta Pflug ist eine in Hamburg ansässige{" "}
           <em>Kreative, Organisatorin und Vernetzerin</em>, die an der
-          Schnittstelle von <span className="pink">Kunst</span>, Bildung und
-          sozialer Transformation arbeitet. Ihre Praxis umfasst
+          Schnittstelle von <span className="pink">Kunst</span>, Bildung,
+          Kuration und sozialer Transformation arbeitet. Ihre Praxis umfasst
           interdisziplinäre Projekte, Kunstvermittlung und Eventproduktion —
-          getragen von der Überzeugung, dass gute Arbeit dort entsteht, wo
-          Menschen, Ideen und Institutionen mit Sorgfalt zusammengebracht
-          werden.
+          immer voran mit der Überzeugung, dass gute Arbeit dort entsteht, wo{" "}
+          <span className="pink">kreative Prozesse</span> auf organisatorische
+          Klarheit treffen.
         </>
       ),
       sections: {

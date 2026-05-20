@@ -58,7 +58,7 @@ export default function ContactContent({ lang }: { lang: Lang }) {
             <span className="lime">{dict.titleAccent}</span>
           </h1>
           <p
-            className="italic contact-subtitle"
+            className="italic"
             style={{
               fontSize: 18,
               maxWidth: 460,

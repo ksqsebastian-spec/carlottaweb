@@ -11,13 +11,6 @@
   --green-dark: #6f7d2d;
 }
 
-[data-theme="night"] {
-  --bg: #07060c;
-  --fg: #ffffff;
-  --muted: #ffffff99;
-  --rule: #ffffff1a;
-}
-
 *,
 *::before,
 *::after {
@@ -157,13 +150,6 @@ img {
 .page {
   min-height: calc(100vh - 60px);
   padding: 0 24px;
-  position: relative;
-  z-index: 1;
-}
-
-.footer {
-  position: relative;
-  z-index: 1;
 }
 
 /* ---------------- Home ---------------- */
@@ -172,7 +158,7 @@ img {
   grid-template-rows: auto auto;
   min-height: calc(100vh - 60px);
   padding: 16px 0 24px;
-  gap: 32px;
+  gap: 56px;
 }
 
 .home-top {
@@ -206,10 +192,6 @@ img {
   align-items: baseline;
 }
 
-.display .accent-pink {
-  color: var(--pink);
-}
-
 .display .pflug-wrap {
   position: relative;
   display: inline-block;
@@ -223,14 +205,14 @@ img {
 
 .display .pflug-brush {
   position: absolute;
-  left: -4%;
-  right: -4%;
-  top: 22%;
-  height: 95%;
+  left: -2%;
+  right: -2%;
+  top: 92%;
+  height: 36%;
   z-index: 2;
   pointer-events: none;
-  transform: rotate(-1.8deg);
-  transform-origin: 30% 50%;
+  transform: rotate(-2.5deg);
+  transform-origin: 28% 50%;
 }
 
 .display .pflug-brush svg {
@@ -929,375 +911,4 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
-}
-
-/* ---------------- Theme toggle ---------------- */
-.theme-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 80;
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  background: var(--bg);
-  border: 1px solid var(--fg);
-  border-radius: 999px;
-  padding: 3px;
-  box-shadow: 3px 3px 0 var(--fg);
-}
-
-.theme-toggle button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 0;
-  background: transparent;
-  color: var(--fg);
-  display: grid;
-  place-items: center;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  opacity: 0.45;
-  transition: opacity 200ms ease, background 200ms ease, color 200ms ease;
-}
-
-.theme-toggle button:hover {
-  opacity: 0.8;
-}
-
-.theme-toggle button.active {
-  opacity: 1;
-  background: var(--fg);
-  color: var(--bg);
-}
-
-.theme-toggle svg {
-  width: 16px;
-  height: 16px;
-  display: block;
-}
-
-/* ---------------- Night mode party layer ---------------- */
-.party {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.disco-ball {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background:
-    radial-gradient(
-      circle at 35% 28%,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 255, 255, 0) 28%
-    ),
-    conic-gradient(
-      from 0deg,
-      #f58dc7,
-      #d5fd68,
-      #fbc7e4,
-      #ffffff,
-      #f58dc7
-    );
-  box-shadow:
-    0 0 40px 6px rgba(245, 141, 199, 0.55),
-    0 0 80px 14px rgba(213, 253, 104, 0.25),
-    inset -14px -14px 30px rgba(0, 0, 0, 0.45);
-  animation: disco-spin 5s linear infinite;
-}
-
-.disco-ball::before {
-  content: "";
-  position: absolute;
-  top: -34px;
-  left: 50%;
-  width: 2px;
-  height: 34px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.6)
-  );
-  transform: translateX(-50%);
-}
-
-.disco-wrap {
-  position: absolute;
-  animation: disco-swing 6s ease-in-out infinite;
-}
-
-.disco-wrap.dw-1 {
-  top: 6%;
-  left: 5%;
-  animation-duration: 7s;
-}
-.disco-wrap.dw-2 {
-  top: 10%;
-  right: 7%;
-  animation-duration: 5s;
-  animation-delay: -2s;
-}
-.disco-wrap.dw-3 {
-  top: 38%;
-  left: 50%;
-  margin-left: -55px;
-  animation-duration: 8s;
-  animation-delay: -3s;
-}
-.disco-wrap.dw-4 {
-  top: 64%;
-  left: 9%;
-  animation-duration: 9s;
-  animation-delay: -1.5s;
-}
-.disco-wrap.dw-5 {
-  top: 52%;
-  right: 12%;
-  animation-duration: 6.5s;
-  animation-delay: -4s;
-}
-.disco-wrap.dw-6 {
-  top: 20%;
-  left: 32%;
-  animation-duration: 6s;
-  animation-delay: -2.5s;
-}
-.disco-wrap.dw-7 {
-  top: 74%;
-  right: 28%;
-  animation-duration: 8.5s;
-  animation-delay: -5s;
-}
-.disco-wrap.dw-8 {
-  top: 26%;
-  right: 35%;
-  animation-duration: 7.5s;
-  animation-delay: -6s;
-}
-.disco-wrap.dw-9 {
-  top: 82%;
-  left: 42%;
-  animation-duration: 5.5s;
-  animation-delay: -3.5s;
-}
-
-.disco-wrap.dw-2 .disco-ball {
-  width: 80px;
-  height: 80px;
-  animation-duration: 4s;
-  animation-direction: reverse;
-}
-.disco-wrap.dw-3 .disco-ball {
-  width: 72px;
-  height: 72px;
-  animation-duration: 6s;
-}
-.disco-wrap.dw-4 .disco-ball {
-  width: 64px;
-  height: 64px;
-  animation-duration: 5s;
-}
-.disco-wrap.dw-5 .disco-ball {
-  width: 96px;
-  height: 96px;
-  animation-duration: 5.5s;
-  animation-direction: reverse;
-}
-.disco-wrap.dw-6 .disco-ball {
-  width: 52px;
-  height: 52px;
-  animation-duration: 4.5s;
-}
-.disco-wrap.dw-7 .disco-ball {
-  width: 92px;
-  height: 92px;
-  animation-duration: 4.5s;
-}
-.disco-wrap.dw-8 .disco-ball {
-  width: 58px;
-  height: 58px;
-  animation-duration: 6.5s;
-  animation-direction: reverse;
-}
-.disco-wrap.dw-9 .disco-ball {
-  width: 68px;
-  height: 68px;
-  animation-duration: 5s;
-}
-
-@keyframes disco-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes disco-swing {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-3deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(3deg);
-  }
-}
-
-.spotlight {
-  position: absolute;
-  inset: -50%;
-  mix-blend-mode: screen;
-  animation: spot-spin 14s linear infinite;
-  opacity: 0.65;
-}
-
-.spotlight.s-pink {
-  background: conic-gradient(
-    from 0deg at 50% 50%,
-    transparent 0deg,
-    rgba(245, 141, 199, 0.25) 70deg,
-    transparent 130deg,
-    transparent 360deg
-  );
-}
-
-.spotlight.s-lime {
-  animation-duration: 18s;
-  animation-direction: reverse;
-  background: conic-gradient(
-    from 180deg at 50% 50%,
-    transparent 0deg,
-    rgba(213, 253, 104, 0.22) 60deg,
-    transparent 120deg,
-    transparent 360deg
-  );
-}
-
-.spotlight.s-pink-light {
-  animation-duration: 22s;
-  background: conic-gradient(
-    from 90deg at 50% 50%,
-    transparent 0deg,
-    rgba(251, 199, 228, 0.2) 80deg,
-    transparent 150deg,
-    transparent 360deg
-  );
-}
-
-.spotlight.s-pink2 {
-  animation-duration: 16s;
-  animation-direction: reverse;
-  background: conic-gradient(
-    from 220deg at 50% 50%,
-    transparent 0deg,
-    rgba(245, 141, 199, 0.22) 50deg,
-    transparent 100deg,
-    transparent 360deg
-  );
-}
-
-.spotlight.s-lime2 {
-  animation-duration: 20s;
-  background: conic-gradient(
-    from 300deg at 50% 50%,
-    transparent 0deg,
-    rgba(213, 253, 104, 0.2) 65deg,
-    transparent 130deg,
-    transparent 360deg
-  );
-}
-
-.spotlight.s-white {
-  animation-duration: 12s;
-  animation-direction: reverse;
-  background: conic-gradient(
-    from 30deg at 50% 50%,
-    transparent 0deg,
-    rgba(255, 255, 255, 0.12) 45deg,
-    transparent 90deg,
-    transparent 360deg
-  );
-}
-
-.spotlight.s-pink-light2 {
-  animation-duration: 24s;
-  background: conic-gradient(
-    from 150deg at 50% 50%,
-    transparent 0deg,
-    rgba(251, 199, 228, 0.18) 70deg,
-    transparent 140deg,
-    transparent 360deg
-  );
-}
-
-@keyframes spot-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.sparkle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 12px #fff, 0 0 22px var(--pink);
-  animation: sparkle-twinkle 2.6s ease-in-out infinite;
-  opacity: 0;
-}
-
-@keyframes sparkle-twinkle {
-  0%,
-  100% {
-    transform: scale(0.4);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-}
-
-/* In night mode the lime brush still pops, but tone down the home
-   divider, page edges and frames a little */
-[data-theme="night"] .portrait,
-[data-theme="night"] .about-portrait {
-  border-color: var(--fg);
-}
-
-[data-theme="night"] .nav {
-  border-bottom-color: var(--rule);
-}
-
-[data-theme="night"] .postcard {
-  box-shadow: 4px 4px 0 #ffffff80;
-  border-color: #ffffff;
-}
-
-[data-theme="night"] .postcard.pc-gold {
-  box-shadow: 4px 4px 0 #6b4a06, 0 0 0 0 rgba(241, 194, 51, 0);
-  border-color: #6b4a06;
-}
-
-[data-theme="night"] .contact-subtitle {
-  text-decoration: line-through;
-  text-decoration-color: var(--pink);
-  text-decoration-thickness: 2.5px;
-  text-decoration-skip-ink: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .disco-ball,
-  .disco-wrap,
-  .spotlight,
-  .sparkle {
-    animation: none !important;
-  }
 }
