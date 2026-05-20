@@ -27,58 +27,81 @@ export default function HomeContent({ lang }: { lang: Lang }) {
           <span className="brush-text">{dict.tagline}</span>
           <span className="brush-stroke" aria-hidden>
             <svg
-              viewBox="0 0 1200 200"
+              viewBox="0 0 1200 220"
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
-                <filter id="brushRough" x="-5%" y="-20%" width="110%" height="140%">
+                <filter id="brushBig" x="-6%" y="-30%" width="112%" height="160%">
                   <feTurbulence
                     type="fractalNoise"
-                    baseFrequency="0.018 0.09"
+                    baseFrequency="0.013 0.18"
                     numOctaves="3"
-                    seed="6"
+                    seed="7"
                   />
-                  <feDisplacementMap in="SourceGraphic" scale="28" />
+                  <feDisplacementMap in="SourceGraphic" scale="34" />
                 </filter>
-                <filter id="brushStreaks" x="-2%" y="-10%" width="104%" height="120%">
+                <filter id="brushStreaks" x="-3%" y="-15%" width="106%" height="130%">
                   <feTurbulence
                     type="fractalNoise"
-                    baseFrequency="0.35 0.04"
+                    baseFrequency="0.45 0.035"
                     numOctaves="2"
-                    seed="2"
+                    seed="11"
                   />
-                  <feDisplacementMap in="SourceGraphic" scale="10" />
+                  <feDisplacementMap in="SourceGraphic" scale="16" />
                 </filter>
               </defs>
 
               <path
-                d="M -40 100 Q 200 80 600 96 T 1240 94"
+                d="M -60 112 Q 220 78 610 108 T 1260 96"
                 stroke="#d5fd68"
-                strokeWidth="160"
+                strokeWidth="180"
                 strokeLinecap="round"
                 fill="none"
-                filter="url(#brushRough)"
-                opacity="0.96"
+                filter="url(#brushBig)"
+                opacity="0.95"
               />
+
               <path
-                d="M 20 80 Q 260 96 600 84 T 1180 92"
+                d="M 30 78 Q 320 92 610 70 T 1180 88"
                 stroke="#d5fd68"
-                strokeWidth="40"
+                strokeWidth="22"
                 strokeLinecap="round"
                 fill="none"
                 filter="url(#brushStreaks)"
-                opacity="0.75"
+                opacity="0.65"
               />
               <path
-                d="M 60 138 Q 340 132 720 140 T 1140 134"
+                d="M 50 158 Q 360 152 760 162 T 1160 156"
                 stroke="#d5fd68"
-                strokeWidth="14"
+                strokeWidth="22"
                 strokeLinecap="round"
                 fill="none"
                 filter="url(#brushStreaks)"
+                opacity="0.6"
+              />
+
+              <path
+                d="M 270 122 L 268 188"
+                stroke="#d5fd68"
+                strokeWidth="12"
+                strokeLinecap="round"
+                fill="none"
+                opacity="0.7"
+              />
+              <path
+                d="M 880 122 L 884 178"
+                stroke="#d5fd68"
+                strokeWidth="9"
+                strokeLinecap="round"
+                fill="none"
                 opacity="0.55"
               />
+
+              <circle cx="100" cy="48" r="4.5" fill="#d5fd68" opacity="0.7" />
+              <circle cx="960" cy="36" r="5.5" fill="#d5fd68" opacity="0.65" />
+              <circle cx="1110" cy="195" r="3.5" fill="#d5fd68" opacity="0.6" />
+              <circle cx="430" cy="200" r="3" fill="#d5fd68" opacity="0.55" />
             </svg>
           </span>
         </h2>

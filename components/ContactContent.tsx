@@ -1,4 +1,5 @@
 import { t, type Lang } from "@/lib/content";
+import GoldPostcard from "@/components/GoldPostcard";
 
 const colors = ["pc-pink", "pc-pink-light", "pc-lime", "pc-green"] as const;
 const animations = [
@@ -49,9 +50,12 @@ export default function ContactContent({ lang }: { lang: Lang }) {
             <div className="pc-lines">
               <span />
               <span />
+              <span />
             </div>
           </div>
         ))}
+
+        <GoldPostcard lang={lang} />
 
         <div>
           <h1 className="big">

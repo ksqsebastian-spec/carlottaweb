@@ -47,10 +47,7 @@ export default function AboutContent({ lang }: { lang: Lang }) {
         <aside>
           <div className="about-portrait">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/reference/F0C3C4C2-D61A-4524-8C21-3D9552CE789D.JPG"
-              alt="Carlotta Pflug"
-            />
+            <img src="/reference/about-green.jpg" alt="Carlotta Pflug" />
           </div>
           <div className="eyebrow">{dict.eyebrow}</div>
           <h1 className="name">
@@ -60,11 +57,6 @@ export default function AboutContent({ lang }: { lang: Lang }) {
           </h1>
           <div className="pronouns italic">{dict.pronouns}</div>
           <div className="links">
-            <a href="mailto:carlottapflug@gmail.com">carlottapflug@gmail.com</a>
-            <a href="tel:+4917622116272">+49 176 22116272</a>
-            <a href="https://www.pal-me.art" target="_blank" rel="noreferrer">
-              pal-me.art ↗
-            </a>
             <Link href={contactHref}>{dict.cta}</Link>
           </div>
         </aside>

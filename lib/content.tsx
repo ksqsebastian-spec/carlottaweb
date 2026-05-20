@@ -12,7 +12,7 @@ export const t = {
     },
     about: {
       eyebrow: "About her",
-      pronouns: "she / her — based in hh.",
+      pronouns: "she / her",
       cta: "Get in touch →",
       lead: (
         <>
@@ -136,7 +136,7 @@ export const t = {
     },
     about: {
       eyebrow: "Über sie",
-      pronouns: "sie / ihr — aus hh.",
+      pronouns: "sie / ihr",
       cta: "Schreib mir →",
       lead: (
         <>
