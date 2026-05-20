@@ -1,19 +1,34 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const links = [
+  { href: "/", label: "HOME" },
+  { href: "/about", label: "ABOUT HER" },
+  { href: "/contact", label: "CONTACT" },
+];
+
 export default function Nav() {
+  const pathname = usePathname();
   return (
     <nav className="nav">
-      <a href="#" className="logo">
-        carlotta<span style={{ opacity: 0.6 }}>*</span>
-      </a>
+      <Link href="/" className="logo">
+        <span className="dot" />
+        carlotta pflug<span style={{ color: "var(--pink)" }}>*</span>
+      </Link>
       <ul>
-        <li>
-          <a href="#work">Work</a>
-        </li>
-        <li>
-          <a href="#about">Studio</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        {links.map((l) => {
+          const active =
+            l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+          return (
+            <li key={l.href}>
+              <Link href={l.href} className={active ? "active" : undefined}>
+                {l.label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

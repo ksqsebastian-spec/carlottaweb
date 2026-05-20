@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Carlotta — Creative Studio",
+  title: "Carlotta Pflug — creating, managing & connecting in hh.",
   description:
-    "An independent studio specializing in beauty, fashion, and wellness — art direction, identity, and social.",
+    "Personal portfolio of Carlotta Pflug — Hamburg-based, working across interdisciplinary art, education, and social transformation.",
 };
 
 export default function RootLayout({
@@ -14,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
