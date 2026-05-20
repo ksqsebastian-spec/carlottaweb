@@ -1,30 +1,52 @@
 import { t, type Lang } from "@/lib/content";
 
-const postcards = [
-  { className: "pc-pink", stamp: "✶" },
-  { className: "pc-pink-light", stamp: "✶" },
-  { className: "pc-lime", stamp: "✶" },
-  { className: "pc-green", stamp: "✶" },
+const colors = ["pc-pink", "pc-pink-light", "pc-lime", "pc-green"] as const;
+const animations = [
+  "pc-anim-1",
+  "pc-anim-2",
+  "pc-anim-3",
+  "pc-anim-4",
+  "pc-anim-5",
+  "pc-anim-6",
+  "pc-anim-7",
+  "pc-anim-8",
+] as const;
+
+const hellos = [
+  { hello: "Hello!", lang: "English" },
+  { hello: "Bonjour!", lang: "Français" },
+  { hello: "¡Hola!", lang: "Español" },
+  { hello: "こんにちは!", lang: "日本語" },
+  { hello: "Merhaba!", lang: "Türkçe" },
+  { hello: "Hallo!", lang: "Deutsch" },
+  { hello: "Ciao!", lang: "Italiano" },
+  { hello: "Olá!", lang: "Português" },
+  { hello: "안녕!", lang: "한국어" },
+  { hello: "你好!", lang: "中文" },
+  { hello: "Привет!", lang: "Русский" },
+  { hello: "Cześć!", lang: "Polski" },
 ];
 
 export default function ContactContent({ lang }: { lang: Lang }) {
   const dict = t[lang].contact;
-  const msg =
-    lang === "de"
-      ? "Liebe Carlotta, ein kleiner Gruß aus dem Netz."
-      : "Dear Carlotta, just a little hello from the internet.";
 
   return (
     <main className="page">
       <div className="contact-page">
-        {postcards.map((pc, i) => (
-          <div key={i} className={`postcard ${pc.className}`} aria-hidden>
-            <div className="pc-left">
-              <div className="pc-msg">{msg}</div>
-              <div className="pc-stamp">{pc.stamp}</div>
+        {hellos.map((h, i) => (
+          <div
+            key={i}
+            className={`postcard ${colors[i % colors.length]} ${animations[i % animations.length]}`}
+            aria-hidden
+          >
+            <div className="pc-stamp">✶</div>
+            <div>
+              <div className="pc-hello" lang={h.lang}>
+                {h.hello}
+              </div>
+              <div className="pc-lang">{h.lang}</div>
             </div>
             <div className="pc-lines">
-              <span />
               <span />
               <span />
             </div>
