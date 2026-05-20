@@ -191,7 +191,7 @@ img {
 .portrait {
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: var(--pink-light);
+  background: var(--lime);
   overflow: hidden;
   position: relative;
 }
