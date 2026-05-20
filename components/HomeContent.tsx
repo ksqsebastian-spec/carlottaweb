@@ -20,8 +20,6 @@ export default function HomeContent({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        <div className="home-divider" />
-
         <h2 className="brush-line">
           <span className="brush-text">{dict.tagline}</span>
           <span className="brush-stroke" aria-hidden>
@@ -31,32 +29,52 @@ export default function HomeContent({ lang }: { lang: Lang }) {
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
-                <filter id="rough">
+                <filter id="brushRough" x="-5%" y="-20%" width="110%" height="140%">
                   <feTurbulence
                     type="fractalNoise"
-                    baseFrequency="0.9"
-                    numOctaves="2"
-                    seed="3"
+                    baseFrequency="0.018 0.09"
+                    numOctaves="3"
+                    seed="6"
                   />
-                  <feDisplacementMap in="SourceGraphic" scale="6" />
+                  <feDisplacementMap in="SourceGraphic" scale="28" />
+                </filter>
+                <filter id="brushStreaks" x="-2%" y="-10%" width="104%" height="120%">
+                  <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.35 0.04"
+                    numOctaves="2"
+                    seed="2"
+                  />
+                  <feDisplacementMap in="SourceGraphic" scale="10" />
                 </filter>
               </defs>
+
               <path
-                d="M 20 110 C 160 70, 280 150, 420 100 S 640 150, 780 95 S 980 145, 1120 100 L 1180 110"
+                d="M -40 100 Q 200 80 600 96 T 1240 94"
                 stroke="#d5fd68"
-                strokeWidth="115"
+                strokeWidth="160"
                 strokeLinecap="round"
                 fill="none"
-                filter="url(#rough)"
-                opacity="0.92"
+                filter="url(#brushRough)"
+                opacity="0.96"
               />
               <path
-                d="M 40 105 C 200 130, 320 80, 480 115 S 700 80, 840 120 S 1000 85, 1140 110"
+                d="M 20 80 Q 260 96 600 84 T 1180 92"
                 stroke="#d5fd68"
                 strokeWidth="40"
                 strokeLinecap="round"
                 fill="none"
+                filter="url(#brushStreaks)"
                 opacity="0.75"
+              />
+              <path
+                d="M 60 138 Q 340 132 720 140 T 1140 134"
+                stroke="#d5fd68"
+                strokeWidth="14"
+                strokeLinecap="round"
+                fill="none"
+                filter="url(#brushStreaks)"
+                opacity="0.55"
               />
             </svg>
           </span>
