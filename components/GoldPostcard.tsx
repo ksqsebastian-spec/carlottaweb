@@ -46,10 +46,10 @@ export default function GoldPostcard({ lang }: { lang: Lang }) {
     const burst: Particle[] = [];
     const flash: Flash[] = [{ id: nextId++, x: cx, y: cy }];
 
-    // main ring
-    for (let i = 0; i < 22; i++) {
-      const angle = (i / 22) * Math.PI * 2;
-      const dist = 150 + Math.random() * 90;
+    // outer ring
+    for (let i = 0; i < 20; i++) {
+      const angle = (i / 20) * Math.PI * 2;
+      const dist = 420 + Math.random() * 120;
       burst.push({
         id: nextId++,
         x: cx,
@@ -57,14 +57,29 @@ export default function GoldPostcard({ lang }: { lang: Lang }) {
         tx: Math.cos(angle) * dist,
         ty: Math.sin(angle) * dist,
         color: COLORS[i % COLORS.length],
-        size: 9,
+        size: 10,
+        delay: 0.05,
+      });
+    }
+    // main ring
+    for (let i = 0; i < 36; i++) {
+      const angle = (i / 36) * Math.PI * 2;
+      const dist = 280 + Math.random() * 130;
+      burst.push({
+        id: nextId++,
+        x: cx,
+        y: cy,
+        tx: Math.cos(angle) * dist,
+        ty: Math.sin(angle) * dist,
+        color: COLORS[i % COLORS.length],
+        size: 14,
         delay: 0,
       });
     }
     // inner ring, slightly delayed
-    for (let i = 0; i < 14; i++) {
-      const angle = (i / 14) * Math.PI * 2 + 0.25;
-      const dist = 70 + Math.random() * 60;
+    for (let i = 0; i < 22; i++) {
+      const angle = (i / 22) * Math.PI * 2 + 0.25;
+      const dist = 140 + Math.random() * 90;
       burst.push({
         id: nextId++,
         x: cx,
@@ -72,14 +87,14 @@ export default function GoldPostcard({ lang }: { lang: Lang }) {
         tx: Math.cos(angle) * dist,
         ty: Math.sin(angle) * dist,
         color: COLORS[(i + 2) % COLORS.length],
-        size: 6,
-        delay: 0.18,
+        size: 10,
+        delay: 0.2,
       });
     }
-    // random sparks
-    for (let i = 0; i < 12; i++) {
+    // random sparks scattered far
+    for (let i = 0; i < 32; i++) {
       const angle = Math.random() * Math.PI * 2;
-      const dist = 40 + Math.random() * 200;
+      const dist = 80 + Math.random() * 480;
       burst.push({
         id: nextId++,
         x: cx,
@@ -87,8 +102,8 @@ export default function GoldPostcard({ lang }: { lang: Lang }) {
         tx: Math.cos(angle) * dist,
         ty: Math.sin(angle) * dist,
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
-        size: 4,
-        delay: 0.08 + Math.random() * 0.25,
+        size: 5 + Math.random() * 4,
+        delay: 0.08 + Math.random() * 0.4,
       });
     }
 
@@ -101,13 +116,13 @@ export default function GoldPostcard({ lang }: { lang: Lang }) {
       setFlashes((cur) =>
         cur.filter((f) => !flash.some((b) => b.id === f.id))
       );
-    }, 700);
+    }, 900);
     window.setTimeout(() => {
       setParticles((cur) =>
         cur.filter((p) => !burst.some((b) => b.id === p.id))
       );
-    }, 2000);
-    window.setTimeout(() => setHidden(false), 4500);
+    }, 2800);
+    window.setTimeout(() => setHidden(false), 6500);
   };
 
   return (
@@ -115,7 +130,7 @@ export default function GoldPostcard({ lang }: { lang: Lang }) {
       {!hidden && (
         <div
           ref={cardRef}
-          className="postcard pc-gold pc-anim-5"
+          className="postcard pc-gold pc-anim-gold"
           onClick={explode}
           role="button"
           tabIndex={0}
