@@ -291,9 +291,11 @@ img {
 /* ---------------- About ---------------- */
 .about-page {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 64px;
+  grid-template-columns: 260px 1fr;
+  gap: 80px;
   padding: 64px 0 120px;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .about-page aside {
@@ -365,11 +367,14 @@ img {
 .about-page .lead {
   font-family: "Fraunces", serif;
   font-weight: 400;
-  font-size: clamp(28px, 3.4vw, 44px);
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-  margin: 0 0 64px;
-  max-width: 880px;
+  font-size: clamp(26px, 2.8vw, 38px);
+  line-height: 1.32;
+  letter-spacing: -0.012em;
+  margin: 0 auto 64px;
+  max-width: 720px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .about-page .lead em {
