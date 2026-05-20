@@ -1,9 +1,9 @@
 import ContactContent from "@/components/ContactContent";
 
 export const metadata = {
-  title: "Contact — Carlotta Pflug",
+  title: "Kontakt — Carlotta Pflug",
 };
 
 export default function Page() {
-  return <ContactContent lang="en" />;
+  return <ContactContent lang="de" />;
 }

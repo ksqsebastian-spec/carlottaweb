@@ -1,9 +1,11 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { t } from "@/lib/content";
+
 export default function Footer() {
-  return (
-    <footer className="footer">
-      <div>© Carlotta Pflug, 2026</div>
-      <div className="center">Hamburg, DE</div>
-      <div className="right">carlottapflug@gmail.com</div>
-    </footer>
-  );
+  const pathname = usePathname();
+  const lang =
+    pathname === "/de" || pathname.startsWith("/de/") ? "de" : "en";
+  return <footer className="footer">{t[lang].footer}</footer>;
 }

@@ -1,9 +1,9 @@
 import AboutContent from "@/components/AboutContent";
 
 export const metadata = {
-  title: "About — Carlotta Pflug",
+  title: "Über sie — Carlotta Pflug",
 };
 
 export default function Page() {
-  return <AboutContent lang="en" />;
+  return <AboutContent lang="de" />;
 }

@@ -30,6 +30,16 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* ---------------- Pink-star cursor ---------------- */
+html,
+body,
+a,
+button,
+input,
+textarea {
+  cursor: url("/cursor.svg") 14 14, auto;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -45,6 +55,10 @@ img {
   font-style: italic;
   font-weight: 400;
   letter-spacing: -0.01em;
+}
+
+.pink {
+  color: var(--pink);
 }
 
 /* ---------------- Nav ---------------- */
@@ -69,11 +83,9 @@ img {
   font-weight: 500;
 }
 
-.nav .logo .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--pink);
+.nav .logo .star {
+  width: 14px;
+  height: 14px;
   display: inline-block;
 }
 
@@ -83,6 +95,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav a {
@@ -105,57 +118,65 @@ img {
   background: var(--lime);
 }
 
+.lang-toggle {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 8px;
+  padding-left: 16px;
+  border-left: 1px solid var(--rule);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.lang-toggle .lang {
+  opacity: 0.4;
+  padding-bottom: 0;
+}
+
+.lang-toggle .lang.active {
+  opacity: 1;
+  color: var(--pink);
+}
+
+.lang-toggle .lang.active::after {
+  display: none;
+}
+
+.lang-toggle .sep {
+  opacity: 0.4;
+}
+
 /* ---------------- Page frame ---------------- */
 .page {
   min-height: calc(100vh - 60px);
   padding: 0 24px;
 }
 
-/* ---------------- Home (Good Sound style) ---------------- */
+/* ---------------- Home ---------------- */
 .home {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto auto;
   min-height: calc(100vh - 60px);
-  padding: 32px 0 24px;
-  gap: 24px;
+  padding: 64px 0 32px;
+  gap: 48px;
 }
 
-.strip {
+.home-top {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 8px;
-}
-
-.strip-img {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: var(--pink-light);
-}
-
-.strip-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.strip-img.empty {
-  background: var(--lime);
-}
-
-.strip-img.empty-pink {
-  background: var(--pink);
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: end;
 }
 
 .display {
   font-family: "Inter", sans-serif;
   font-weight: 900;
-  font-size: clamp(64px, 17vw, 280px);
+  font-size: clamp(56px, 12vw, 200px);
   line-height: 0.86;
   letter-spacing: -0.045em;
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-self: center;
 }
 
 .display .row {
@@ -163,72 +184,91 @@ img {
   align-items: baseline;
 }
 
-.display .quote {
-  color: var(--fg);
-}
-
 .display .accent-pink {
   color: var(--pink);
 }
 
-.home-bottom {
+.portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--pink-light);
+  overflow: hidden;
+  position: relative;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portrait .placeholder {
+  position: absolute;
+  inset: 0;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 2fr 1fr;
-  gap: 32px;
-  align-items: end;
-  padding-top: 16px;
-  border-top: 1px solid var(--fg);
-  font-size: 12px;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
-}
-
-.home-bottom .label {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  text-transform: lowercase;
-  font-size: 12px;
-}
-
-.home-bottom .pill {
-  display: inline-block;
-  background: var(--lime);
-  color: var(--fg);
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-weight: 500;
-}
-
-.home-bottom .col-desc {
+  place-items: center;
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 14px;
-  line-height: 1.45;
-  color: var(--fg);
-  max-width: 460px;
+  color: var(--green-dark);
+  text-align: center;
+  padding: 16px;
 }
 
-.home-bottom .col-meta {
-  text-align: right;
-  color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.home-divider {
+  height: 1px;
+  background: var(--fg);
+  width: 100%;
+}
+
+.brush-line {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 6.5vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  margin: 0;
+  padding: 32px 0 48px;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+.brush-line .brush-text {
+  position: relative;
+  z-index: 1;
+}
+
+.brush-line .brush-stroke {
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  top: 38%;
+  height: 70%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brush-line .brush-stroke svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 @media (max-width: 900px) {
-  .strip {
-    grid-template-columns: repeat(4, 1fr);
+  .home {
+    padding: 32px 0 24px;
+    gap: 32px;
   }
-  .home-bottom {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  .home-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .home-bottom .col-desc {
-    grid-column: 1 / -1;
+  .portrait {
+    aspect-ratio: 4 / 3;
   }
-  .home-bottom .col-meta {
-    text-align: left;
+  .brush-line {
+    padding: 24px 0 32px;
   }
 }
 
@@ -395,12 +435,14 @@ img {
 
 /* ---------------- Contact ---------------- */
 .contact-page {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   padding: 80px 0 120px;
   min-height: calc(100vh - 60px);
   align-content: start;
+  overflow: hidden;
 }
 
 .contact-page .big {
@@ -453,43 +495,127 @@ img {
   border-color: var(--pink);
 }
 
+/* ---------------- Postcard flutter ---------------- */
+.postcard {
+  position: fixed;
+  width: 220px;
+  height: 140px;
+  background: var(--pink-light);
+  border: 1px solid var(--fg);
+  box-shadow: 4px 4px 0 var(--fg);
+  pointer-events: none;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  gap: 8px;
+  top: 0;
+  left: 0;
+  animation: flutter 18s ease-in-out infinite;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 10px;
+}
+
+.postcard .pc-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.postcard .pc-stamp {
+  width: 36px;
+  height: 44px;
+  background: var(--lime);
+  border: 1px solid var(--fg);
+  align-self: flex-end;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  color: var(--fg);
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.postcard .pc-msg {
+  font-size: 9px;
+  line-height: 1.3;
+  color: var(--fg);
+}
+
+.postcard .pc-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border-left: 1px dashed var(--fg);
+  padding-left: 8px;
+}
+
+.postcard .pc-lines span {
+  display: block;
+  height: 1px;
+  background: var(--fg);
+}
+
+.postcard .pc-lines span:nth-child(1) {
+  width: 90%;
+}
+.postcard .pc-lines span:nth-child(2) {
+  width: 70%;
+}
+.postcard .pc-lines span:nth-child(3) {
+  width: 80%;
+}
+
+@keyframes flutter {
+  0% {
+    transform: translate(-260px, 85vh) rotate(-14deg);
+  }
+  20% {
+    transform: translate(20vw, 30vh) rotate(6deg);
+  }
+  40% {
+    transform: translate(45vw, 60vh) rotate(-8deg);
+  }
+  60% {
+    transform: translate(65vw, 20vh) rotate(10deg);
+  }
+  80% {
+    transform: translate(80vw, 70vh) rotate(-4deg);
+  }
+  100% {
+    transform: translate(110vw, 40vh) rotate(12deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .postcard {
+    animation: none;
+    transform: translate(40vw, 50vh) rotate(-6deg);
+  }
+}
+
 @media (max-width: 900px) {
   .contact-page {
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 48px 0 80px;
   }
+  .postcard {
+    width: 180px;
+    height: 115px;
+  }
 }
 
 /* ---------------- Footer ---------------- */
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: end;
-  padding: 24px;
-  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px 24px;
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
-}
-
-.footer .center {
-  text-align: center;
-}
-
-.footer .right {
-  text-align: right;
-}
-
-@media (max-width: 700px) {
-  .footer {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    text-align: left;
-  }
-  .footer .center,
-  .footer .right {
-    text-align: left;
-  }
 }
