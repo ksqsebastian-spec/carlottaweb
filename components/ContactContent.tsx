@@ -15,17 +15,12 @@ const animations = [
 
 const hellos = [
   { hello: "Hello!", lang: "English" },
-  { hello: "Bonjour!", lang: "Français" },
-  { hello: "¡Hola!", lang: "Español" },
-  { hello: "こんにちは!", lang: "日本語" },
-  { hello: "Merhaba!", lang: "Türkçe" },
   { hello: "Hallo!", lang: "Deutsch" },
-  { hello: "Ciao!", lang: "Italiano" },
+  { hello: "¡Hola!", lang: "Español" },
   { hello: "Olá!", lang: "Português" },
-  { hello: "안녕!", lang: "한국어" },
-  { hello: "你好!", lang: "中文" },
-  { hello: "Привет!", lang: "Русский" },
-  { hello: "Cześć!", lang: "Polski" },
+  { hello: "Ciao!", lang: "Italiano" },
+  { hello: "Merhaba!", lang: "Türkçe" },
+  { hello: "こんにちは!", lang: "日本語" },
 ];
 
 export default function ContactContent({ lang }: { lang: Lang }) {
@@ -63,7 +58,7 @@ export default function ContactContent({ lang }: { lang: Lang }) {
             <span className="lime">{dict.titleAccent}</span>
           </h1>
           <p
-            className="italic"
+            className="italic contact-subtitle"
             style={{
               fontSize: 18,
               maxWidth: 460,

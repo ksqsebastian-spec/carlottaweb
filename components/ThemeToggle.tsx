@@ -35,21 +35,37 @@ const MoonIcon = () => (
 );
 
 function Party() {
-  const sparkles = Array.from({ length: 24 }, (_, i) => i);
+  const sparkles = Array.from({ length: 36 }, (_, i) => i);
+  const discos = [
+    "dw-1",
+    "dw-2",
+    "dw-3",
+    "dw-4",
+    "dw-5",
+    "dw-6",
+    "dw-7",
+    "dw-8",
+    "dw-9",
+  ];
+  const spots = [
+    "s-pink",
+    "s-lime",
+    "s-pink-light",
+    "s-pink2",
+    "s-lime2",
+    "s-white",
+    "s-pink-light2",
+  ];
   return (
     <div className="party" aria-hidden>
-      <div className="spotlight s-pink" />
-      <div className="spotlight s-lime" />
-      <div className="spotlight s-pink-light" />
-      <div className="disco-wrap dw-1">
-        <div className="disco-ball" />
-      </div>
-      <div className="disco-wrap dw-2">
-        <div className="disco-ball" />
-      </div>
-      <div className="disco-wrap dw-3">
-        <div className="disco-ball" />
-      </div>
+      {spots.map((s) => (
+        <div key={s} className={`spotlight ${s}`} />
+      ))}
+      {discos.map((d) => (
+        <div key={d} className={`disco-wrap ${d}`}>
+          <div className="disco-ball" />
+        </div>
+      ))}
       {sparkles.map((i) => {
         const x = (i * 137) % 100;
         const y = (i * 311) % 100;
