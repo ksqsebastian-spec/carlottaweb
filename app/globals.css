@@ -266,6 +266,21 @@ img {
   align-self: start;
 }
 
+.about-portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--pink);
+  overflow: hidden;
+  border: 1px solid var(--fg);
+  margin-bottom: 20px;
+}
+
+.about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-page .eyebrow {
   font-size: 11px;
   letter-spacing: 0.14em;

@@ -45,6 +45,10 @@ export default function AboutContent({ lang }: { lang: Lang }) {
     <main className="page">
       <div className="about-page">
         <aside>
+          <div className="about-portrait">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/about.jpg" alt="Carlotta Pflug" />
+          </div>
           <div className="eyebrow">{dict.eyebrow}</div>
           <h1 className="name">
             Carlotta
