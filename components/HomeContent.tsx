@@ -16,7 +16,10 @@ export default function HomeContent({ lang }: { lang: Lang }) {
           </h1>
           <div className="portrait">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/portrait.jpg" alt={dict.home.portrait_alt} />
+            <img
+              src="/reference/IMG_0381-2.jpg"
+              alt={dict.home.portrait_alt}
+            />
           </div>
         </div>
 

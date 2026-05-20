@@ -47,7 +47,10 @@ export default function AboutContent({ lang }: { lang: Lang }) {
         <aside>
           <div className="about-portrait">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/about.jpg" alt="Carlotta Pflug" />
+            <img
+              src="/reference/F0C3C4C2-D61A-4524-8C21-3D9552CE789D.JPG"
+              alt="Carlotta Pflug"
+            />
           </div>
           <div className="eyebrow">{dict.eyebrow}</div>
           <h1 className="name">
