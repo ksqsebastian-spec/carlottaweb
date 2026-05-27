@@ -72,7 +72,7 @@ export const t = {
             date: "—",
           },
           {
-            role: "Mental Health First Aid",
+            role: "Mental Health First Aid (MHFA-Kurs)",
             place: "First Responder Course",
             date: "—",
           },
@@ -195,7 +195,7 @@ export const t = {
             date: "—",
           },
           {
-            role: "Mental Health First Aid",
+            role: "Mental Health First Aid (MHFA-Kurs)",
             place: "Erste-Hilfe-Kurs für psychische Gesundheit",
             date: "—",
           },
