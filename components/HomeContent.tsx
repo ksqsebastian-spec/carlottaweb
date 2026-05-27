@@ -22,40 +22,40 @@ export default function HomeContent({ lang }: { lang: Lang }) {
                     <defs>
                       <filter
                         id="pinkBrushBig"
-                        x="-8%"
-                        y="-45%"
-                        width="116%"
-                        height="190%"
+                        x="-6%"
+                        y="-30%"
+                        width="112%"
+                        height="160%"
                       >
                         <feTurbulence
                           type="fractalNoise"
-                          baseFrequency="0.024 0.22"
-                          numOctaves="4"
+                          baseFrequency="0.014 0.18"
+                          numOctaves="3"
                           seed="4"
                         />
-                        <feDisplacementMap in="SourceGraphic" scale="48" />
+                        <feDisplacementMap in="SourceGraphic" scale="30" />
                       </filter>
                       <filter
                         id="pinkBrushStreaks"
-                        x="-4%"
-                        y="-25%"
-                        width="108%"
-                        height="150%"
+                        x="-3%"
+                        y="-15%"
+                        width="106%"
+                        height="130%"
                       >
                         <feTurbulence
                           type="fractalNoise"
-                          baseFrequency="0.5 0.06"
-                          numOctaves="3"
+                          baseFrequency="0.45 0.035"
+                          numOctaves="2"
                           seed="9"
                         />
-                        <feDisplacementMap in="SourceGraphic" scale="24" />
+                        <feDisplacementMap in="SourceGraphic" scale="14" />
                       </filter>
                     </defs>
 
                     <path
-                      d="M -40 112 Q 100 66 220 116 T 410 92 T 640 108"
+                      d="M -40 108 Q 130 78 320 106 T 640 96"
                       stroke="#f58dc7"
-                      strokeWidth="168"
+                      strokeWidth="170"
                       strokeLinecap="round"
                       fill="none"
                       filter="url(#pinkBrushBig)"
@@ -63,56 +63,36 @@ export default function HomeContent({ lang }: { lang: Lang }) {
                     />
 
                     <path
-                      d="M 10 70 Q 160 104 330 60 T 600 94"
-                      stroke="#f58dc7"
-                      strokeWidth="18"
-                      strokeLinecap="round"
-                      fill="none"
-                      filter="url(#pinkBrushStreaks)"
-                      opacity="0.6"
-                    />
-                    <path
-                      d="M 40 162 Q 210 138 400 170 T 590 148"
+                      d="M 20 78 Q 170 92 320 70 T 600 86"
                       stroke="#f58dc7"
                       strokeWidth="20"
                       strokeLinecap="round"
                       fill="none"
                       filter="url(#pinkBrushStreaks)"
-                      opacity="0.5"
+                      opacity="0.6"
                     />
                     <path
-                      d="M 90 58 L 250 150"
+                      d="M 30 156 Q 180 150 380 162 T 590 154"
                       stroke="#f58dc7"
-                      strokeWidth="8"
+                      strokeWidth="22"
                       strokeLinecap="round"
                       fill="none"
                       filter="url(#pinkBrushStreaks)"
-                      opacity="0.4"
+                      opacity="0.55"
                     />
 
                     <path
-                      d="M 150 120 L 158 188"
+                      d="M 150 122 L 152 178"
                       stroke="#f58dc7"
                       strokeWidth="10"
                       strokeLinecap="round"
                       fill="none"
-                      opacity="0.6"
-                    />
-                    <path
-                      d="M 408 118 L 398 172"
-                      stroke="#f58dc7"
-                      strokeWidth="7"
-                      strokeLinecap="round"
-                      fill="none"
-                      opacity="0.5"
+                      opacity="0.65"
                     />
 
-                    <circle cx="70" cy="42" r="4" fill="#f58dc7" opacity="0.7" />
-                    <circle cx="300" cy="34" r="3" fill="#f58dc7" opacity="0.6" />
-                    <circle cx="480" cy="40" r="5" fill="#f58dc7" opacity="0.6" />
-                    <circle cx="540" cy="184" r="3.5" fill="#f58dc7" opacity="0.55" />
-                    <circle cx="205" cy="192" r="2.5" fill="#f58dc7" opacity="0.5" />
-                    <circle cx="600" cy="150" r="2.5" fill="#f58dc7" opacity="0.5" />
+                    <circle cx="80" cy="48" r="4" fill="#f58dc7" opacity="0.7" />
+                    <circle cx="480" cy="38" r="5" fill="#f58dc7" opacity="0.65" />
+                    <circle cx="540" cy="180" r="3" fill="#f58dc7" opacity="0.55" />
                   </svg>
                 </span>
               </span>
@@ -136,30 +116,30 @@ export default function HomeContent({ lang }: { lang: Lang }) {
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
-                <filter id="brushBig" x="-8%" y="-45%" width="116%" height="190%">
+                <filter id="brushBig" x="-6%" y="-30%" width="112%" height="160%">
                   <feTurbulence
                     type="fractalNoise"
-                    baseFrequency="0.02 0.22"
-                    numOctaves="4"
+                    baseFrequency="0.013 0.18"
+                    numOctaves="3"
                     seed="7"
                   />
-                  <feDisplacementMap in="SourceGraphic" scale="52" />
+                  <feDisplacementMap in="SourceGraphic" scale="34" />
                 </filter>
-                <filter id="brushStreaks" x="-4%" y="-25%" width="108%" height="150%">
+                <filter id="brushStreaks" x="-3%" y="-15%" width="106%" height="130%">
                   <feTurbulence
                     type="fractalNoise"
-                    baseFrequency="0.5 0.05"
-                    numOctaves="3"
+                    baseFrequency="0.45 0.035"
+                    numOctaves="2"
                     seed="11"
                   />
-                  <feDisplacementMap in="SourceGraphic" scale="26" />
+                  <feDisplacementMap in="SourceGraphic" scale="16" />
                 </filter>
               </defs>
 
               <path
-                d="M -60 114 Q 180 64 420 118 T 800 90 T 1260 110"
+                d="M -60 112 Q 220 78 610 108 T 1260 96"
                 stroke="#d5fd68"
-                strokeWidth="176"
+                strokeWidth="180"
                 strokeLinecap="round"
                 fill="none"
                 filter="url(#brushBig)"
@@ -167,74 +147,45 @@ export default function HomeContent({ lang }: { lang: Lang }) {
               />
 
               <path
-                d="M 30 74 Q 300 108 620 60 T 1180 92"
-                stroke="#d5fd68"
-                strokeWidth="20"
-                strokeLinecap="round"
-                fill="none"
-                filter="url(#brushStreaks)"
-                opacity="0.62"
-              />
-              <path
-                d="M 50 164 Q 380 138 760 172 T 1160 150"
+                d="M 30 78 Q 320 92 610 70 T 1180 88"
                 stroke="#d5fd68"
                 strokeWidth="22"
                 strokeLinecap="round"
                 fill="none"
                 filter="url(#brushStreaks)"
-                opacity="0.55"
+                opacity="0.65"
               />
               <path
-                d="M 120 56 L 360 158"
+                d="M 50 158 Q 360 152 760 162 T 1160 156"
                 stroke="#d5fd68"
-                strokeWidth="9"
+                strokeWidth="22"
                 strokeLinecap="round"
                 fill="none"
                 filter="url(#brushStreaks)"
-                opacity="0.4"
-              />
-              <path
-                d="M 1080 60 L 880 160"
-                stroke="#d5fd68"
-                strokeWidth="8"
-                strokeLinecap="round"
-                fill="none"
-                filter="url(#brushStreaks)"
-                opacity="0.38"
+                opacity="0.6"
               />
 
               <path
-                d="M 270 120 L 262 192"
+                d="M 270 122 L 268 188"
                 stroke="#d5fd68"
                 strokeWidth="12"
                 strokeLinecap="round"
                 fill="none"
-                opacity="0.65"
+                opacity="0.7"
               />
               <path
-                d="M 880 120 L 890 180"
+                d="M 880 122 L 884 178"
                 stroke="#d5fd68"
                 strokeWidth="9"
                 strokeLinecap="round"
                 fill="none"
-                opacity="0.5"
-              />
-              <path
-                d="M 600 124 L 596 168"
-                stroke="#d5fd68"
-                strokeWidth="6"
-                strokeLinecap="round"
-                fill="none"
-                opacity="0.45"
+                opacity="0.55"
               />
 
-              <circle cx="100" cy="44" r="4.5" fill="#d5fd68" opacity="0.7" />
-              <circle cx="500" cy="34" r="3" fill="#d5fd68" opacity="0.6" />
-              <circle cx="960" cy="36" r="5.5" fill="#d5fd68" opacity="0.6" />
-              <circle cx="1110" cy="198" r="3.5" fill="#d5fd68" opacity="0.55" />
-              <circle cx="430" cy="202" r="3" fill="#d5fd68" opacity="0.5" />
-              <circle cx="720" cy="196" r="2.5" fill="#d5fd68" opacity="0.5" />
-              <circle cx="40" cy="150" r="2.5" fill="#d5fd68" opacity="0.45" />
+              <circle cx="100" cy="48" r="4.5" fill="#d5fd68" opacity="0.7" />
+              <circle cx="960" cy="36" r="5.5" fill="#d5fd68" opacity="0.65" />
+              <circle cx="1110" cy="195" r="3.5" fill="#d5fd68" opacity="0.6" />
+              <circle cx="430" cy="200" r="3" fill="#d5fd68" opacity="0.55" />
             </svg>
           </span>
         </h2>
