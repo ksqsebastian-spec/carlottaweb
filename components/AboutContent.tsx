@@ -93,24 +93,19 @@ export default function AboutContent({ lang }: { lang: Lang }) {
               variant="lime"
             />
             <Section
-              title={dict.sections.training}
-              items={dict.data.training}
-              variant="green"
-            />
-            <Section
               title={dict.sections.work}
               items={dict.data.work}
               variant="pink"
             />
             <Section
+              title={dict.sections.training}
+              items={dict.data.training}
+              variant="green"
+            />
+            <Section
               title={dict.sections.education}
               items={dict.data.education}
               variant="lime"
-            />
-            <Section
-              title={dict.sections.languages}
-              items={dict.data.languages}
-              variant="green"
             />
           </div>
         </div>
