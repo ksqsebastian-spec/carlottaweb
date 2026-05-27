@@ -47,7 +47,7 @@ export const t = {
             date: "2025",
             href: "https://www.pal-me.art",
             desc: "A BKM-funded interdisciplinary art project connecting artistic practice, mediation and social dialogue. (Placeholder text — to be completed.)",
-            photo: "/reference/palme.jpg",
+            photo: "/reference/palme.png",
           },
         ] as CV[],
         internships: [
@@ -175,7 +175,7 @@ export const t = {
             date: "2025",
             href: "https://www.pal-me.art",
             desc: "Ein von der BKM gefördertes interdisziplinäres Kunstprojekt, das künstlerische Praxis, Vermittlung und gesellschaftlichen Dialog verbindet. (Platzhaltertext — wird noch ergänzt.)",
-            photo: "/reference/palme.jpg",
+            photo: "/reference/palme.png",
           },
         ] as CV[],
         internships: [

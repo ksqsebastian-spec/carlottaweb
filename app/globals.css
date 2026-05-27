@@ -469,8 +469,8 @@ img {
 
 .cv-photo {
   width: 100%;
-  max-width: 440px;
-  aspect-ratio: 3 / 1;
+  max-width: 460px;
+  aspect-ratio: 1549 / 488;
   background: var(--pink-light);
   border: 1px solid var(--fg);
   overflow: hidden;
