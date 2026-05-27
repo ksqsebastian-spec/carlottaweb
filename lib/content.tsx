@@ -23,8 +23,9 @@ export const t = {
       cta: "Get in touch →",
       lead: (
         <>
-          Carlotta Pflug is a Hamburg native working at the intersection of
-          art, education, curation, and social transformation. As a{" "}
+          <span className="pink">Carlotta Pflug</span> is a Hamburg native
+          working at the intersection of art, education, curation, and social
+          transformation. As a{" "}
           <span className="green">creative organizer and connector</span>, her
           practice spans interdisciplinary projects, arts mediation, and
           management. Always guided by the conviction that good work happens
@@ -146,8 +147,9 @@ export const t = {
       cta: "Schreib mir →",
       lead: (
         <>
-          Carlotta Pflug ist Hamburgerin, die an der Schnittstelle von Kunst,
-          Bildung, Kuration und sozialer Transformation arbeitet. Als{" "}
+          <span className="pink">Carlotta Pflug</span> ist Hamburgerin, die an
+          der Schnittstelle von Kunst, Bildung, Kuration und sozialer
+          Transformation arbeitet. Als{" "}
           <span className="green">kreative Organisatorin und Vernetzerin</span>{" "}
           umfasst ihre Praxis interdisziplinäre Projekte, Kunstvermittlung und
           Management. Immer voran mit der Überzeugung, dass gute Arbeit dort
