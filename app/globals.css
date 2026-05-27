@@ -390,8 +390,8 @@ img {
 }
 
 .about-page .lead .green {
-  background: var(--lime);
-  color: var(--fg);
+  background: var(--green-dark);
+  color: #ffffff;
   font-style: normal;
   padding: 0 8px;
   -webkit-box-decoration-break: clone;
