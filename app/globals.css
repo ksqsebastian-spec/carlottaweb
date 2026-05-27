@@ -461,15 +461,16 @@ img {
 .cv-extra {
   grid-column: 1 / -1;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 14px;
   margin-top: 14px;
   align-items: flex-start;
 }
 
 .cv-photo {
-  width: 110px;
-  flex-shrink: 0;
-  aspect-ratio: 3 / 4;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 3 / 1;
   background: var(--pink-light);
   border: 1px solid var(--fg);
   overflow: hidden;
