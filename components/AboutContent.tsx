@@ -65,10 +65,7 @@ export default function AboutContent({ lang }: { lang: Lang }) {
         <aside>
           <div className="about-portrait">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/reference/F0C3C4C2-D61A-4524-8C21-3D9552CE789D.JPG"
-              alt="Carlotta Pflug"
-            />
+            <img src="/reference/about-cutout.png" alt="Carlotta Pflug" />
           </div>
           <h1 className="name">
             Carlotta
@@ -88,7 +85,7 @@ export default function AboutContent({ lang }: { lang: Lang }) {
             <Section
               title={dict.sections.own}
               items={dict.data.own}
-              variant="dark"
+              variant="pink"
             />
             <Section
               title={dict.sections.internships}
@@ -103,7 +100,7 @@ export default function AboutContent({ lang }: { lang: Lang }) {
             <Section
               title={dict.sections.work}
               items={dict.data.work}
-              variant="dark"
+              variant="pink"
             />
             <Section
               title={dict.sections.education}

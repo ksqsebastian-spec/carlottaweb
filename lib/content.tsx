@@ -25,9 +25,9 @@ export const t = {
         <>
           Carlotta Pflug is a Hamburg native working at the intersection of
           art, education, curation, and social transformation. As a{" "}
-          <span className="green">creative, manager and connector</span>, her
-          practice spans interdisciplinary projects, arts mediation, and event
-          production. Always guided by the conviction that good work happens
+          <span className="green">creative organizer and connector</span>, her
+          practice spans interdisciplinary projects, arts mediation, and
+          management. Always guided by the conviction that good work happens
           where creative processes meet organizational clarity.
         </>
       ),
@@ -42,12 +42,10 @@ export const t = {
       data: {
         own: [
           {
-            role: "PAL ME",
+            role: "PAL ME.",
             place: "interdisciplinary art project — funded by BKM",
             date: "2025",
             href: "https://www.pal-me.art",
-            desc: "A BKM-funded interdisciplinary art project connecting artistic practice, mediation and social dialogue. (Placeholder text — to be completed.)",
-            photo: "/reference/palme.png",
           },
         ] as CV[],
         internships: [
@@ -55,13 +53,11 @@ export const t = {
             role: "MK&G",
             place: "Education and Outreach",
             date: "10 / 2025 – 01 / 2026",
-            desc: "Conceiving and supporting education formats and outreach programmes. (Placeholder text.)",
           },
           {
             role: "MARKK",
             place: "Press and Public Relations",
             date: "08 – 09 / 2024",
-            desc: "Supporting press and public-relations work for the museum. (Placeholder text.)",
           },
         ] as CV[],
         training: [
@@ -133,7 +129,7 @@ export const t = {
       title: "say",
       titleAccent: "hiiiii.",
       subtitle:
-        "For collaborations, project requests, or just a beer.",
+        "For collaborations, project requests, or just a drink.",
       emailLabel: "Email",
     },
   },
@@ -150,13 +146,12 @@ export const t = {
       cta: "Schreib mir →",
       lead: (
         <>
-          Carlotta Pflug ist eine Hamburgerin, die an der Schnittstelle von
-          Kunst, Bildung, Kuration und sozialer Transformation arbeitet. Als{" "}
-          <span className="green">Kreative, Managerin und Vernetzerin</span>{" "}
+          Carlotta Pflug ist Hamburgerin, die an der Schnittstelle von Kunst,
+          Bildung, Kuration und sozialer Transformation arbeitet. Als{" "}
+          <span className="green">kreative Organisatorin und Vernetzerin</span>{" "}
           umfasst ihre Praxis interdisziplinäre Projekte, Kunstvermittlung und
-          Eventproduktion. Immer voran mit der Überzeugung, dass gute Arbeit
-          dort entsteht, wo kreative Prozesse auf organisatorische Klarheit
-          treffen.
+          Management. Immer voran mit der Überzeugung, dass gute Arbeit dort
+          entsteht, wo kreative Prozesse auf organisatorische Klarheit treffen.
         </>
       ),
       sections: {
@@ -170,12 +165,10 @@ export const t = {
       data: {
         own: [
           {
-            role: "PAL ME",
+            role: "PAL ME.",
             place: "interdisziplinäres Kunstprojekt — gefördert von der BKM",
             date: "2025",
             href: "https://www.pal-me.art",
-            desc: "Ein von der BKM gefördertes interdisziplinäres Kunstprojekt, das künstlerische Praxis, Vermittlung und gesellschaftlichen Dialog verbindet. (Platzhaltertext — wird noch ergänzt.)",
-            photo: "/reference/palme.png",
           },
         ] as CV[],
         internships: [
@@ -183,13 +176,11 @@ export const t = {
             role: "MK&G",
             place: "Bildung & Vermittlung",
             date: "10 / 2025 – 01 / 2026",
-            desc: "Konzeption und Begleitung von Vermittlungsformaten und Outreach-Programmen. (Platzhaltertext.)",
           },
           {
             role: "MARKK",
             place: "Presse- & Öffentlichkeitsarbeit",
             date: "08 – 09 / 2024",
-            desc: "Unterstützung der Presse- und Öffentlichkeitsarbeit des Museums. (Platzhaltertext.)",
           },
         ] as CV[],
         training: [
@@ -261,7 +252,7 @@ export const t = {
       title: "sag",
       titleAccent: "halloooo.",
       subtitle:
-        "Für Kooperationen, Projektanfragen, oder einfach ein Bier.",
+        "Für Kooperationen, Projektanfragen oder einfach ein Getränk.",
       emailLabel: "E-Mail",
     },
   },
