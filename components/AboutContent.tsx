@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { t, type Lang } from "@/lib/content";
 
-type CV = { role: string; place?: string; date: string; href?: string };
+type CV = {
+  role: string;
+  place?: string;
+  date: string;
+  href?: string;
+  desc?: string;
+  photo?: string;
+};
 
 function Section({
   title,
@@ -10,7 +17,7 @@ function Section({
 }: {
   title: string;
   items: readonly CV[];
-  variant?: "pink" | "lime" | "green";
+  variant?: "pink" | "lime" | "green" | "dark";
 }) {
   return (
     <div className="cv-section">
@@ -31,6 +38,17 @@ function Section({
           </div>
           <div className="place">{it.place}</div>
           <div className="date">{it.date}</div>
+          {(it.desc || it.photo) && (
+            <div className="cv-extra">
+              {it.photo && (
+                <div className="cv-photo">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={it.photo} alt={it.role} />
+                </div>
+              )}
+              {it.desc && <p className="cv-desc">{it.desc}</p>}
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -47,9 +65,11 @@ export default function AboutContent({ lang }: { lang: Lang }) {
         <aside>
           <div className="about-portrait">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/reference/about-green.jpg" alt="Carlotta Pflug" />
+            <img
+              src="/reference/F0C3C4C2-D61A-4524-8C21-3D9552CE789D.JPG"
+              alt="Carlotta Pflug"
+            />
           </div>
-          <div className="eyebrow">{dict.eyebrow}</div>
           <h1 className="name">
             Carlotta
             <br />
@@ -68,7 +88,7 @@ export default function AboutContent({ lang }: { lang: Lang }) {
             <Section
               title={dict.sections.own}
               items={dict.data.own}
-              variant="pink"
+              variant="dark"
             />
             <Section
               title={dict.sections.internships}
@@ -83,7 +103,7 @@ export default function AboutContent({ lang }: { lang: Lang }) {
             <Section
               title={dict.sections.work}
               items={dict.data.work}
-              variant="pink"
+              variant="dark"
             />
             <Section
               title={dict.sections.education}

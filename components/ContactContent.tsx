@@ -14,12 +14,9 @@ const animations = [
 ] as const;
 
 const hellos = [
-  { hello: "Hello!", lang: "English" },
   { hello: "Hallo!", lang: "Deutsch" },
+  { hello: "Hello!", lang: "English" },
   { hello: "¡Hola!", lang: "Español" },
-  { hello: "Olá!", lang: "Português" },
-  { hello: "Ciao!", lang: "Italiano" },
-  { hello: "Merhaba!", lang: "Türkçe" },
   { hello: "こんにちは!", lang: "日本語" },
 ];
 

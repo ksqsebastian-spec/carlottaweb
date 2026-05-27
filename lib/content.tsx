@@ -1,6 +1,13 @@
 export type Lang = "en" | "de";
 
-type CV = { role: string; place?: string; date: string; href?: string };
+type CV = {
+  role: string;
+  place?: string;
+  date: string;
+  href?: string;
+  desc?: string;
+  photo?: string;
+};
 
 export const t = {
   en: {
@@ -16,14 +23,12 @@ export const t = {
       cta: "Get in touch →",
       lead: (
         <>
-          Carlotta Pflug is a Hamburg-based{" "}
-          <em>creator, organizer and connector</em> working at the intersection
-          of <span className="pink">art</span>, education, curation, and social
-          transformation. Her practice spans interdisciplinary projects, arts
-          mediation, and event production — guided always by the conviction
-          that good work happens where{" "}
-          <span className="pink">creative processes</span> meet organizational
-          clarity.
+          Carlotta Pflug is a Hamburg native working at the intersection of
+          art, education, curation, and social transformation. As a{" "}
+          <span className="green">creative, manager and connector</span>, her
+          practice spans interdisciplinary projects, arts mediation, and event
+          production. Always guided by the conviction that good work happens
+          where creative processes meet organizational clarity.
         </>
       ),
       sections: {
@@ -41,6 +46,8 @@ export const t = {
             place: "interdisciplinary art project — funded by BKM",
             date: "2025",
             href: "https://www.pal-me.art",
+            desc: "A BKM-funded interdisciplinary art project connecting artistic practice, mediation and social dialogue. (Placeholder text — to be completed.)",
+            photo: "/reference/palme.jpg",
           },
         ] as CV[],
         internships: [
@@ -48,11 +55,13 @@ export const t = {
             role: "MK&G",
             place: "Education and Outreach",
             date: "10 / 2025 – 01 / 2026",
+            desc: "Conceiving and supporting education formats and outreach programmes. (Placeholder text.)",
           },
           {
             role: "MARKK",
             place: "Press and Public Relations",
             date: "08 – 09 / 2024",
+            desc: "Supporting press and public-relations work for the museum. (Placeholder text.)",
           },
         ] as CV[],
         training: [
@@ -105,7 +114,7 @@ export const t = {
           {
             role: "Medical School Hamburg",
             place: "BA Expressive Arts in Social Transformation",
-            date: "2023 – 2026",
+            date: "2023 – present",
           },
           {
             role: "Gymnasium Kaiser-Friedrich-Ufer",
@@ -130,7 +139,7 @@ export const t = {
   },
   de: {
     nav: { home: "START", about: "ÜBER SIE", contact: "KONTAKT" },
-    tagline: "kreieren, organisieren & verbinden in hh.",
+    tagline: "kreieren, managen & vernetzen in hh.",
     footer: "© Carlotta Pflug, 2026",
     home: {
       portrait_alt: "Carlotta Pflug",
@@ -141,14 +150,13 @@ export const t = {
       cta: "Schreib mir →",
       lead: (
         <>
-          Carlotta Pflug ist eine in Hamburg ansässige{" "}
-          <em>Kreative, Organisatorin und Vernetzerin</em>, die an der
-          Schnittstelle von <span className="pink">Kunst</span>, Bildung,
-          Kuration und sozialer Transformation arbeitet. Ihre Praxis umfasst
-          interdisziplinäre Projekte, Kunstvermittlung und Eventproduktion —
-          immer voran mit der Überzeugung, dass gute Arbeit dort entsteht, wo{" "}
-          <span className="pink">kreative Prozesse</span> auf organisatorische
-          Klarheit treffen.
+          Carlotta Pflug ist eine Hamburgerin, die an der Schnittstelle von
+          Kunst, Bildung, Kuration und sozialer Transformation arbeitet. Als{" "}
+          <span className="green">Kreative, Managerin und Vernetzerin</span>{" "}
+          umfasst ihre Praxis interdisziplinäre Projekte, Kunstvermittlung und
+          Eventproduktion. Immer voran mit der Überzeugung, dass gute Arbeit
+          dort entsteht, wo kreative Prozesse auf organisatorische Klarheit
+          treffen.
         </>
       ),
       sections: {
@@ -166,6 +174,8 @@ export const t = {
             place: "interdisziplinäres Kunstprojekt — gefördert von der BKM",
             date: "2025",
             href: "https://www.pal-me.art",
+            desc: "Ein von der BKM gefördertes interdisziplinäres Kunstprojekt, das künstlerische Praxis, Vermittlung und gesellschaftlichen Dialog verbindet. (Platzhaltertext — wird noch ergänzt.)",
+            photo: "/reference/palme.jpg",
           },
         ] as CV[],
         internships: [
@@ -173,11 +183,13 @@ export const t = {
             role: "MK&G",
             place: "Bildung & Vermittlung",
             date: "10 / 2025 – 01 / 2026",
+            desc: "Konzeption und Begleitung von Vermittlungsformaten und Outreach-Programmen. (Platzhaltertext.)",
           },
           {
             role: "MARKK",
             place: "Presse- & Öffentlichkeitsarbeit",
             date: "08 – 09 / 2024",
+            desc: "Unterstützung der Presse- und Öffentlichkeitsarbeit des Museums. (Platzhaltertext.)",
           },
         ] as CV[],
         training: [
@@ -230,7 +242,7 @@ export const t = {
           {
             role: "Medical School Hamburg",
             place: "B.A. Expressive Arts in Social Transformation",
-            date: "2023 – 2026",
+            date: "2023 – dato",
           },
           {
             role: "Gymnasium Kaiser-Friedrich-Ufer",
