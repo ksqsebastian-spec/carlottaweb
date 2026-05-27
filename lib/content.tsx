@@ -186,7 +186,7 @@ export const t = {
         training: [
           {
             role: "Academy for Sport and Health",
-            place: "Fitnesstrainer C-Lizenz",
+            place: "Fitnesstrainerin C-Lizenz",
             date: "—",
           },
           {
