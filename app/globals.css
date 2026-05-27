@@ -390,8 +390,12 @@ img {
 }
 
 .about-page .lead .green {
-  color: var(--green-dark);
-  font-style: italic;
+  background: var(--lime);
+  color: var(--fg);
+  font-style: normal;
+  padding: 0 8px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .cv {
