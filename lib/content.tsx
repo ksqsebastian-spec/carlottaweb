@@ -54,11 +54,13 @@ export const t = {
             role: "MK&G",
             place: "Education and Outreach",
             date: "10 / 2025 – 01 / 2026",
+            href: "https://www.mkg-hamburg.de",
           },
           {
             role: "MARKK",
             place: "Press and Public Relations",
             date: "08 – 09 / 2024",
+            href: "https://www.markk-hamburg.de",
           },
         ] as CV[],
         training: [
@@ -178,11 +180,13 @@ export const t = {
             role: "MK&G",
             place: "Bildung & Vermittlung",
             date: "10 / 2025 – 01 / 2026",
+            href: "https://www.mkg-hamburg.de",
           },
           {
             role: "MARKK",
             place: "Presse- & Öffentlichkeitsarbeit",
             date: "08 – 09 / 2024",
+            href: "https://www.markk-hamburg.de",
           },
         ] as CV[],
         training: [
